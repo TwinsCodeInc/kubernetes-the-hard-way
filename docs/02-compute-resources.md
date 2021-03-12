@@ -40,6 +40,12 @@ This does the below:
   This is required for kubernetes networking to function correctly.
     > sysctl net.bridge.bridge-nf-call-iptables=1
 
+**ISSUE:**
+sysctl: cannot stat /proc/sys/net/bridge/bridge-nf-call-iptables: No such file or directory sysctl: cannot stat /proc/sys/net/bridge/bridge-nf-call-ip6tables: No such file or directory
+
+# SOLUTION
+$ modprobe br_netfilter
+$ sysctl -p /etc/sysctl.conf
 
 ## SSH to the nodes
 
