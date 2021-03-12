@@ -43,9 +43,10 @@ This does the below:
 **ISSUE:**
 sysctl: cannot stat /proc/sys/net/bridge/bridge-nf-call-iptables: No such file or directory sysctl: cannot stat /proc/sys/net/bridge/bridge-nf-call-ip6tables: No such file or directory
 
-# SOLUTION
+**SOLUTION**
 $ modprobe br_netfilter
 $ sysctl -p /etc/sysctl.conf
+
 
 ## SSH to the nodes
 
